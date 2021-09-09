@@ -23,7 +23,7 @@ const Weather = () => {
     const celsTemp = (weather.main.temp - 273.15).toFixed(0)
 
     return (
-        <motion.div initial={{x:'-100vw', scale: 0}} animate={{x:0, scale: 1}} transition={{duration: 1}} className={classes.weather}>
+        <motion.div initial={{x:'-100vw', scale: 0}} animate={{x:0, scale: 1}} transition={{duration: 0.5}} className={classes.weather}>
             {/* <div className={classes.weatherImage}>
                 <img src={icon} alt="day/night" />
             </div> */}
@@ -32,7 +32,7 @@ const Weather = () => {
             </div> */}
             <div className={classes.weatherDesc}>
                 <h2>{weather.name} </h2>
-                <span>{humanDateFormat}</span>
+                {/* <span>{humanDateFormat}</span> */}
                 {/* <span>{city[0].Country.LocalizedName}</span> */}
                 <h3>{weather.weather[0].description}</h3>
                  <h1>{celsTemp} °C</h1> 
