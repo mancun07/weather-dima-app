@@ -1,0 +1,14 @@
+.daily-weather {
+    cursor: pointer;
+}
+
+.daily-weather__item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    align-items: center;
+}
+
+.daily-weather__item span {
+    text-align: center;
+}

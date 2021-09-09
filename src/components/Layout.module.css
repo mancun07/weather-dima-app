@@ -1,0 +1,8 @@
+.main {
+    width:600px;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    height:100vh;
+    margin-top: 30px;
+}
