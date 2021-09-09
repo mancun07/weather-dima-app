@@ -50,7 +50,7 @@ export const actionsfetchDataHandler = (userValue) => {
         const data3 = await fetch3DataHandler(data)
       } catch (error) {
         dispatch(uiActions.showNotification({
-          message:'Проверьте правильность написания города'
+          message:'Хуйню не вводи блядь!'
         }))  
       }
             dispatch(uiActions.setLoading(false))

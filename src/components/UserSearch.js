@@ -14,7 +14,7 @@ const UserSearch = (props) => {
 
         if (inputRefValue === '') {
             dispatch(uiActions.showNotification({
-                message: 'Город не введен. Введите пожалуйста.'
+                message: 'Епт...Город то введи!'
             }))
         } else {
             dispatch(actionsfetchDataHandler(inputRefValue))
