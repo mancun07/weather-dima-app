@@ -15,6 +15,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import TodayInfo from './components/TodayInfo';
 
 // "homepage": "https://mancun07.github.io/weather-app",
 
@@ -63,6 +64,7 @@ function App() {
         {!loading && hourlyWeather && <WeatherDetails />}
         <UserSearch/>
         {!loading && dailyWeather && <DailyWeather />}
+        {!loading && weather && <TodayInfo />}
           {/* </Switch>
         </Router> */}
       </Layout>
