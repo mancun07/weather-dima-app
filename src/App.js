@@ -40,13 +40,16 @@ function App() {
   }, [dispatch, notification])
 
 
-//   const unixTimestamp = 1631044800
+  // const unixTimestamp = 1631264400
 
-//   const milliseconds = unixTimestamp * 1000 
+  // const milliseconds = unixTimestamp * 1000 
   
-//   const dateObject = new Date(milliseconds)
+  // const dateObject = new Date(milliseconds)
+
+  // console.log(dateObject)
   
-//   const humanDateFormat = dateObject.toLocaleString() 
+  // const humanDateFormat = dateObject.toLocaleString()
+//   const humanDateFormat = dateObject.getDay()
 // console.log(humanDateFormat)
 
 
