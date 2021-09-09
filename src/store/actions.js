@@ -7,9 +7,11 @@ export const actionsfetchDataHandler = (userValue) => {
     return async (dispatch) => {
         const fetchDataHandler = async () => {
           const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${userValue}&appid=${key}&lang=ru`)
+          console.log(response.ok)
           if (!response.ok) {
             throw new Error({message: 'There is a server error'})
           }
+       
           const data = await response.json()
           dispatch(cityActions.addWeather(data))
           return data
@@ -17,6 +19,10 @@ export const actionsfetchDataHandler = (userValue) => {
 
           const fetch2DataHandler = async (data) => {
             const response = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&exclude=daily&lang=ru&appid=${key}`)
+            console.log(response.ok)
+            if (!response.ok) {
+              throw new Error({message: 'There is a server error'})
+            }
             const data2 = await response.json()
             console.log(data2)
             dispatch(cityActions.addHourlyWeather(data2))
@@ -25,6 +31,10 @@ export const actionsfetchDataHandler = (userValue) => {
 
           const fetch3DataHandler = async (data) => {
             const response = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&exclude=hourly&appid=${key}`)
+            console.log(response.ok)
+            if (!response.ok) {
+              throw new Error({message: 'There is a server error'})
+            }
             const data3 = await response.json()
             dispatch(cityActions.addDailyWeather(data3))
             return data3

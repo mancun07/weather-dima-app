@@ -12,7 +12,7 @@ const UserSearch = (props) => {
         e.preventDefault();
         let inputRefValue = inputRef.current.value.trim();
 
-        if (inputRefValue === '') {
+        if (inputRefValue === '' || !isNaN(inputRefValue)) {
             dispatch(uiActions.showNotification({
                 message: 'Епт...Город то введи!'
             }))
