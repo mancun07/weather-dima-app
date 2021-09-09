@@ -40,7 +40,6 @@ console.log(humanDateFormat2)
         return {
             ...el,
             dt: daysOfWeek[humanDateFormat], 
-            weekDay: 'День недели',
             temp: (el.temp.day - 273.15).toFixed(0),
             id: Math.random()
         }
