@@ -8,11 +8,13 @@ export const actionsfetchDataHandler = (userValue) => {
         const fetchDataHandler = async () => {
           const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${userValue}&appid=${key}&lang=ru`)
           console.log(response.ok)
+        
           if (!response.ok) {
             throw new Error({message: 'There is a server error'})
           }
        
           const data = await response.json()
+          console.log(data)
           dispatch(cityActions.addWeather(data))
           return data
           }
@@ -24,7 +26,7 @@ export const actionsfetchDataHandler = (userValue) => {
               throw new Error({message: 'There is a server error'})
             }
             const data2 = await response.json()
-            console.log(data2)
+            // console.log(data2)
             dispatch(cityActions.addHourlyWeather(data2))
             return data2
           }

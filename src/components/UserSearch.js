@@ -13,6 +13,7 @@ const UserSearch = (props) => {
         let inputRefValue = inputRef.current.value.trim();
 
         if (inputRefValue === '' || !isNaN(inputRefValue)) {
+            window.scrollTo(0, 0);
             dispatch(uiActions.showNotification({
                 message: 'Епт...Город то введи!'
             }))
