@@ -1,4 +1,6 @@
-
+html {
+  overflow-x: hidden;
+}
 
 body {
   margin: 0;
@@ -11,7 +13,7 @@ body {
   box-sizing: border-box;
   background: #1b1b2a;
   color: #fff;
-  overflow-x: hidden;
+
 }
 
 code {
