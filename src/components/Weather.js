@@ -23,7 +23,7 @@ const Weather = () => {
     const celsTemp = (weather.main.temp - 273.15).toFixed(0)
 
     return (
-        <motion.div initial={{x:'-100vw'}} animate={{x:0}} transition={{duration: 0.5}} className={classes.weather}>
+        <motion.div initial={{x:'-100vw'}} animate={{x:0}} className={classes.weather}>
             {/* <div className={classes.weatherImage}>
                 <img src={icon} alt="day/night" />
             </div> */}
