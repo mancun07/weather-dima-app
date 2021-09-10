@@ -15,6 +15,7 @@ export const actionsfetchDataHandler = (userValue) => {
        
           const data = await response.json()
           console.log(data)
+          // data.main.temp = (data.main.temp - 273.15).toFixed(0)
           dispatch(cityActions.addWeather(data))
           return data
           }
@@ -26,7 +27,6 @@ export const actionsfetchDataHandler = (userValue) => {
               throw new Error({message: 'There is a server error'})
             }
             const data2 = await response.json()
-            // console.log(data2)
             dispatch(cityActions.addHourlyWeather(data2))
             return data2
           }

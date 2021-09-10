@@ -18,9 +18,7 @@ const Weather = () => {
    // const hour = humanDateFormat.getHours()
 
 
-
     const icon = `http://openweathermap.org/img/w/${weather.weather[0].icon}.png`;
-    const celsTemp = (weather.main.temp - 273.15).toFixed(0)
 
     return (
         <motion.div initial={{x:'-100vw'}} animate={{x:0}} className={classes.weather}>
@@ -35,7 +33,7 @@ const Weather = () => {
                 {/* <span>{humanDateFormat}</span> */}
                 {/* <span>{city[0].Country.LocalizedName}</span> */}
                 <h3>{weather.weather[0].description}</h3>
-                 <h1>{celsTemp} °C</h1> 
+                 <h1>{weather.main.temp} °C</h1> 
             </div>
         </motion.div>
     )

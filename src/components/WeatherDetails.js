@@ -16,12 +16,10 @@ const WeatherDetails = () => {
     const humanDateFormat = dateObject.getHours() + ':' + dateObject.getMinutes() + '0'
     // const hour = humanDateFormat.getHours()
 
-    const updatedTemp = (el.temp - 273.15).toFixed(0)
 
         return {
             ...el,
             dt: humanDateFormat,
-            temp: updatedTemp
         }
     })
 
