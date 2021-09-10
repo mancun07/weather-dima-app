@@ -21,10 +21,6 @@ const UserSearch = (props) => {
                 message: 'Город то введи!'
             }))
         } else {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
             dispatch(actionsfetchDataHandler(inputRefValue))
             inputRef.current.value = ''
         }
