@@ -62,7 +62,7 @@ export const actionsfetchDataHandler = (userValue) => {
         const data3 = await fetch3DataHandler(data)
       } catch (error) {
         dispatch(uiActions.showNotification({
-          message:'Хуйню не вводи блядь!'
+          message:'Ерунду не вводи!'
         }))  
       }
             dispatch(uiActions.setLoading(false))
