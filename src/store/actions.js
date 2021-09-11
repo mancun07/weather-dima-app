@@ -32,12 +32,13 @@ export const actionsfetchDataHandler = (userValue) => {
           }
 
           const fetch3DataHandler = async (data) => {
-            const response = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&exclude=hourly&appid=${key}`)
-            console.log(response.ok)
+            const response = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&exclude=hourly&appid=${key}&lang=ru`)
+            // console.log(response.ok)
             if (!response.ok) {
               throw new Error({message: 'There is a server error'})
             }
             const data3 = await response.json()
+            // console.log(data3)
             dispatch(cityActions.addDailyWeather(data3))
             return data3
           }

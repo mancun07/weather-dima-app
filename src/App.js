@@ -16,6 +16,7 @@ import {
   Link
 } from "react-router-dom";
 import TodayInfo from './components/TodayInfo';
+import OtherDetails from './components/OtherDetails';
 
 // "homepage": "https://mancun07.github.io/weather-app",
 
@@ -65,6 +66,7 @@ function App() {
         <UserSearch/>
         {!loading && dailyWeather && <DailyWeather />}
         {!loading && weather && <TodayInfo />}
+        {!loading && weather && <OtherDetails />}
           {/* </Switch>
         </Router> */}
       </Layout>

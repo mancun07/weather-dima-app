@@ -9,38 +9,17 @@ const DailyWeather = () => {
 
     const dailyWeather = useSelector(state => state.city.dailyWeather)
 
-     // const unixTimestamp = 1631264400
-
-  // const milliseconds = unixTimestamp * 1000 
-  
-  // const dateObject = new Date(milliseconds)
-
-  // console.log(dateObject)
-  
-  // const humanDateFormat = dateObject.toLocaleString()
-//   const humanDateFormat = dateObject.getDay()
-// console.log(humanDateFormat)
-
     const updatedArray = dailyWeather.daily.map(el => {
 
-const unixTimestamp = el.dt
-
-  const milliseconds = unixTimestamp * 1000 
-  
-  const dateObject = new Date(milliseconds)
-
-  // console.log(dateObject)
-  
-  const humanDateFormat2 = dateObject.toLocaleString()
-  const humanDateFormat = dateObject.getDay()
+    const unixTimestamp = el.dt
+    const milliseconds = unixTimestamp * 1000 
+    const dateObject = new Date(milliseconds)
+    const humanDateFormat = dateObject.getDay()
   console.log(humanDateFormat)
-console.log(humanDateFormat2)
-
 
         return {
             ...el,
             dt: daysOfWeek[humanDateFormat], 
-            temp: (el.temp.day - 273.15).toFixed(0),
             id: Math.random()
         }
     })
@@ -53,7 +32,7 @@ console.log(humanDateFormat2)
                     <span>
                         <img src={`http://openweathermap.org/img/w/${el.weather[0].icon}.png`} alt=""/>
                     </span>
-                    <span>{el.temp}{' '}°C</span>
+                    <span>{el.temp.day}{' '}°C</span>
                 </li>
             } )}
         </ul>

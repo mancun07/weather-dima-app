@@ -1,6 +1,6 @@
-html {
+/* html {
   overflow-x: hidden;
-}
+} */
 
 body {
   margin: 0;
@@ -10,10 +10,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  box-sizing: border-box;
   background: #1b1b2a;
   color: #fff;
+  overflow-x: hidden;
+}
 
+* {
+  box-sizing: border-box;
 }
 
 code {
