@@ -10,9 +10,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background: #1b1b2a; */
-  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('./images/back2.jpg') no-repeat;
-  background-size: cover;
+  background: #1b1b2a;
+  /* background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('%PUBLIC_URL%/images/back2.jpg') no-repeat;
+  background-size: cover; */
   color: #fff;
   overflow-x: hidden;
 }
