@@ -18,7 +18,7 @@ const UserSearch = (props) => {
                 behavior: "smooth"
             });
             dispatch(uiActions.showNotification({
-                message: 'Город то введи!'
+                message: 'Епт...Город то введи!'
             }))
         } else {
             window.scrollTo({
