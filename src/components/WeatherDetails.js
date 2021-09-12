@@ -19,15 +19,16 @@ const WeatherDetails = () => {
         return {
             ...el,
             dt: humanDateFormat,
+            id: Math.random()
         }
     })
 
-
+    // initial={{x:'100vw'}} animate={{x:0}} 
 
     return (
-        <motion.ul className={classes[`weather-details`]} initial={{x:'100vw'}} animate={{x:0}} >
-            {updatedArray.map((el, i) => {
-                return <li className={classes[`weather-details__item`]} key={i}>
+        <motion.ul className={classes[`weather-details`]} >
+            {updatedArray.map(el => {
+                return <li className={classes[`weather-details__item`]} key={el.id}>
                     <div>{el.dt}{' '}</div>
                     <div>
                         <img src={`http://openweathermap.org/img/w/${el.weather[0].icon}.png`} alt=""/>

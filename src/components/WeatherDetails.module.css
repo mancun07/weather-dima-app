@@ -2,20 +2,20 @@
     border-top: 2px solid #fff;
     border-bottom: 2px solid #fff;
     padding:10px 5px;
+    /* display: flex; */
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     /* grid-auto-flow: column; */
-    max-height: 150px;
-
-    
+    max-height: 130px;
     text-align: center;
     gap: 5px;
-    flex-wrap: nowrap;
     overflow: hidden;
 }
 
 .weather-details__item {
     margin-bottom: 10px;
-    height: 150px;
+  
+    /* flex-basis: 200px; */
  
 }
+
