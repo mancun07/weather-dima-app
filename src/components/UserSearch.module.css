@@ -16,6 +16,10 @@
     line-height: 2;
 }
 
+.notValid  {
+    box-shadow: 0 0 30px rgb(240, 5, 5);
+}
+
 input {
     padding:10px 5px;
     width: 90%;

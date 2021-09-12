@@ -36,19 +36,7 @@ export const actionsfetchDataHandler = (userValue) => {
             return data3
           }
 
-      // const fetchWeatherHandler = async (cityKey) => {
-      //   const response2 = await fetch(`http://dataservice.accuweather.com/currentconditions/v1/${cityKey}?apikey=${key}&language=ru`)
-      //   if (!response2.ok) {
-      //     throw new Error({message: 'There is a server error'})
-      //   }
-      //   const data2 = await response2.json() 
-      //   dispatch(cityActions.addWeather(data2))
-      //   return data2
-      // }
-
-      // fetchDataHandler()
-      // .then(data => fetch2DataHandler(data))
-      // .catch(err => console.log(err))
+      
       try {
         dispatch(uiActions.setLoading(true))
         const data = await fetchDataHandler()
@@ -56,7 +44,7 @@ export const actionsfetchDataHandler = (userValue) => {
         await fetch3DataHandler(data)
       } catch (error) {
         dispatch(uiActions.showNotification({
-          message:'Хуйню не вводи блядь!'
+          message:'Ерунду не вводи! Такого города нет...'
         }))  
       }
             dispatch(uiActions.setLoading(false))

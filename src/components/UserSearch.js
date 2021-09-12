@@ -1,10 +1,11 @@
-import {useRef} from 'react'
+import {useRef, useState} from 'react'
 import classes from './UserSearch.module.css'
 import {uiActions} from '../store/uiSlice'
 import {useDispatch} from 'react-redux'
 import {actionsfetchDataHandler} from '../store/actions'
 
 const UserSearch = (props) => {
+    const [cityIsValid, setCityIsValid] = useState(true)
     const dispatch = useDispatch()
     const inputRef = useRef()
 
@@ -17,8 +18,9 @@ const UserSearch = (props) => {
                 top: 0,
                 behavior: "smooth"
             });
+            setCityIsValid(false)
             dispatch(uiActions.showNotification({
-                message: 'Епт...Город то введи!'
+                message: 'Блин...Город то введи!'
             }))
         } else {
             window.scrollTo({
@@ -35,7 +37,7 @@ const UserSearch = (props) => {
         <form className={classes[`search-form`]} onSubmit={onSubmitHandler}>
             <div className={classes[`form-group`]}>
                 <label htmlFor="city">Введите город</label><br />
-                <input ref={inputRef} type="text" id="city"/>
+                <input className={`${!cityIsValid ? classes.notValid : '' }`} ref={inputRef} type="text" id="city"/>
             </div>
             <button>Получить данные о погоде</button>
         </form>
