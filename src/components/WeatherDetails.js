@@ -25,7 +25,7 @@ const WeatherDetails = () => {
  
 
     return (
-        <motion.ul initial={{x:'-100vw'}} animate={{x:0}} className={classes[`weather-details`]} >
+        <motion.ul initial={{opacity:0}} animate={{opacity:1}} transition={{duration: 1}} className={classes[`weather-details`]} >
             {updatedArray.map(el => {
                 return <li className={classes[`weather-details__item`]} key={el.id}>
                     <div>{el.dt}{' '}</div>
