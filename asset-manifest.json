@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/weather-dima-app/static/css/main.3b6a52cd.chunk.css",
+    "main.css": "/weather-dima-app/static/css/main.1feacd32.chunk.css",
     "main.js": "/weather-dima-app/static/js/main.f56f28c9.chunk.js",
     "main.js.map": "/weather-dima-app/static/js/main.f56f28c9.chunk.js.map",
     "runtime-main.js": "/weather-dima-app/static/js/runtime-main.c71982af.js",
@@ -10,14 +10,14 @@
     "static/js/3.740f0656.chunk.js": "/weather-dima-app/static/js/3.740f0656.chunk.js",
     "static/js/3.740f0656.chunk.js.map": "/weather-dima-app/static/js/3.740f0656.chunk.js.map",
     "index.html": "/weather-dima-app/index.html",
-    "static/css/main.3b6a52cd.chunk.css.map": "/weather-dima-app/static/css/main.3b6a52cd.chunk.css.map",
+    "static/css/main.1feacd32.chunk.css.map": "/weather-dima-app/static/css/main.1feacd32.chunk.css.map",
     "static/js/2.4cb9739d.chunk.js.LICENSE.txt": "/weather-dima-app/static/js/2.4cb9739d.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/weather-dima-app/static/media/back1.a3c31b18.jpg"
+    "static/media/index.css": "/weather-dima-app/static/media/back2.1fa0efaf.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.c71982af.js",
     "static/js/2.4cb9739d.chunk.js",
-    "static/css/main.3b6a52cd.chunk.css",
+    "static/css/main.1feacd32.chunk.css",
     "static/js/main.f56f28c9.chunk.js"
   ]
 }
