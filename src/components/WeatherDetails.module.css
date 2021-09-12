@@ -19,3 +19,9 @@
  
 }
 
+@media (max-width: 550px) {
+    .weather-details {
+        max-height: 130px;
+    }
+}
+
