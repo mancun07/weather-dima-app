@@ -9,7 +9,7 @@ const DailyWeather = () => {
 
     const dailyWeather = useSelector(state => state.city.dailyWeather)
 
-    const updatedArray = dailyWeather.daily.map(el => {
+    const updatedArray = dailyWeather.daily.slice(1).map(el => {
 
     const unixTimestamp = el.dt
     const milliseconds = unixTimestamp * 1000 
@@ -30,7 +30,7 @@ const DailyWeather = () => {
                 return <li className={classes[`daily-weather__item`]} key={el.id}>
                     <span>{el.dt}</span>
                     <span>
-                        <img src={`http://openweathermap.org/img/w/${el.weather[0].icon}.png`} alt=""/>
+                        <img src={`http://openweathermap.org/img/w/${el.weather[0].icon}.png`} alt="weather icon"/>
                     </span>
                     <span>{el.temp.day}{' '}°C</span>
                 </li>

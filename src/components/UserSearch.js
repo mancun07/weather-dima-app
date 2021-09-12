@@ -26,7 +26,7 @@ const UserSearch = (props) => {
                 behavior: "smooth"
             });
             dispatch(actionsfetchDataHandler(inputRefValue))
-            inputRef.current.value = ''
+            // inputRef.current.value = ''
         }
             
     }
