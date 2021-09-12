@@ -22,11 +22,10 @@ const WeatherDetails = () => {
             id: Math.random()
         }
     })
-
-    // initial={{x:'100vw'}} animate={{x:0}} 
+ 
 
     return (
-        <motion.ul className={classes[`weather-details`]} >
+        <motion.ul initial={{x:'-100vw'}} animate={{x:0}} className={classes[`weather-details`]} >
             {updatedArray.map(el => {
                 return <li className={classes[`weather-details__item`]} key={el.id}>
                     <div>{el.dt}{' '}</div>
