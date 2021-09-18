@@ -13,6 +13,7 @@ const Weather = () => {
 //    const humanDateFormat = dateObject.toLocaleString()
    const humanDateFormat = dateObject.getDate() + '/' + dateObject.getMonth() + '/' + dateObject.getFullYear() 
 
+   // To change the first letter of the weather description
    const description = weather.weather[0].description.split('');
     const updatedDescription = description.map((el, index) => {
         return index === 0 ? el.toUpperCase() : el
