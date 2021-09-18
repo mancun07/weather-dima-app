@@ -22,12 +22,16 @@ const UserSearch = (props) => {
             dispatch(uiActions.showNotification({
                 message: 'Блин...Город то введи!'
             }))
+            inputRef.current.focus();
         } else {
             window.scrollTo({
                 top: 0,
                 behavior: "smooth"
             });
             dispatch(actionsfetchDataHandler(inputRefValue))
+            if (!cityIsValid) {
+                setCityIsValid(true);
+            }
             inputRef.current.value = ''
         }
             

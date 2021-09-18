@@ -7,7 +7,7 @@ const WeatherDetails = () => {
 
     const hourlyWeather = useSelector(state => state.city.hourlyWeather)
 
-    const updatedArray = hourlyWeather.hourly.map(el => {
+    const updatedArray = hourlyWeather.hourly.slice(0,6).map(el => {
     
     const unixTimestamp = el.dt
     const milliseconds = unixTimestamp * 1000 
@@ -25,7 +25,7 @@ const WeatherDetails = () => {
  
 
     return (
-        <motion.ul initial={{opacity:0}} animate={{opacity:1}} transition={{duration: 1}} className={classes[`weather-details`]} >
+        <motion.ul initial={{x:'-100vw'}} animate={{x:0}} transition={{duration: 0.6}} className={classes[`weather-details`]} >
             {updatedArray.map(el => {
                 return <li className={classes[`weather-details__item`]} key={el.id}>
                     <div>{el.dt}{' '}</div>

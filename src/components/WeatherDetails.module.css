@@ -6,7 +6,7 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     /* grid-auto-flow: column; */
-    max-height: 170px;
+    /* max-height: 170px; */
     text-align: center;
     gap: 5px;
     overflow: hidden;
@@ -19,9 +19,9 @@
  
 }
 
-@media (max-width: 550px) {
+/* @media (max-width: 550px) {
     .weather-details {
         max-height: 130px;
     }
-}
+} */
 
