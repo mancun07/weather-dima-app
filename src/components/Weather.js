@@ -13,6 +13,11 @@ const Weather = () => {
 //    const humanDateFormat = dateObject.toLocaleString()
    const humanDateFormat = dateObject.getDate() + '/' + dateObject.getMonth() + '/' + dateObject.getFullYear() 
 
+   const description = weather.weather[0].description.split('');
+    const updatedDescription = description.map((el, index) => {
+        return index === 0 ? el.toUpperCase() : el
+    }).join('')
+    console.log(updatedDescription)
 
 
     // const icon = `http://openweathermap.org/img/w/${weather.weather[0].icon}.png`;
@@ -23,7 +28,7 @@ const Weather = () => {
                 <h2>{weather.name} </h2>
                 {/* <span>{humanDateFormat}</span> */}
                 {/* <span>{city[0].Country.LocalizedName}</span> */}
-                <h3>{weather.weather[0].description}</h3>
+                <h3>{updatedDescription}</h3>
                  <h1>{weather.main.temp} °C</h1> 
             </div>
         </motion.div>
