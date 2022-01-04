@@ -11,14 +11,12 @@ export const actionsfetchDataHandler = (userValue) => {
             throw new Error({message: 'There is a server error'})
           }
           const data = await response.json()
-          console.log(data)
           dispatch(cityActions.addWeather(data))
           return data
           }
 
           const fetch2DataHandler = async (data) => {
             const response = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&exclude=daily&lang=ru&appid=${key}`)
-            console.log(response.ok)
             if (!response.ok) {
               throw new Error({message: 'There is a server error'})
             }
@@ -58,7 +56,7 @@ export const actionsfetchDataHandler = (userValue) => {
       // .then(data => fetchWeatherHandler(data))
       // .catch(err => {
       //   dispatch(uiActions.showNotification({
-      //     message:'не вводи фигню всякую!'
+      //     message:'Некорректный ввод! Такого города нет!'
       //   }))  
       // })
       // dispatch(uiActions.setLoading(false))

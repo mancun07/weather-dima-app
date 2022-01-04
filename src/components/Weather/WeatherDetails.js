@@ -6,7 +6,6 @@ import {motion} from 'framer-motion'
 const WeatherDetails = () => {
 
     const hourlyWeather = useSelector(state => state.city.hourlyWeather)
-    console.log(hourlyWeather)
 
     const updatedArray = hourlyWeather.hourly.slice(0,6).map(el => {
     
@@ -21,10 +20,9 @@ const WeatherDetails = () => {
             id: Math.random()
         }
     })
-    console.log(updatedArray)
 
     return (
-        <motion.ul initial={{x:'-100vw'}} animate={{x:0}} transition={{duration: 0.6}} className={classes[`weather-details`]} >
+        <motion.ul initial={{x:'100vw'}} animate={{x:0}} className={classes[`weather-details`]} >
             {updatedArray.map(el => {
                 return <li className={classes[`weather-details__item`]} key={el.id}>
                     <div>{el.dt}</div>

@@ -7,7 +7,6 @@ const DailyWeather = () => {
     const daysOfWeek = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота' ]
 
     const dailyWeather = useSelector(state => state.city.dailyWeather)
-    console.log(dailyWeather.daily)
 
     const updatedArray = dailyWeather.daily.slice(1).map(el => {
 
@@ -15,7 +14,6 @@ const DailyWeather = () => {
     const milliseconds = unixTimestamp * 1000 
     const dateObject = new Date(milliseconds)
     const humanDateFormat = dateObject.getDay()
-  console.log(humanDateFormat)
 
         return {
             ...el,
