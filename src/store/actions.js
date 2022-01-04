@@ -11,6 +11,7 @@ export const actionsfetchDataHandler = (userValue) => {
             throw new Error({message: 'There is a server error'})
           }
           const data = await response.json()
+          console.log(data)
           dispatch(cityActions.addWeather(data))
           return data
           }
@@ -44,7 +45,7 @@ export const actionsfetchDataHandler = (userValue) => {
         await fetch3DataHandler(data)
       } catch (error) {
         dispatch(uiActions.showNotification({
-          message:'Ерунду не вводи! Такого города нет...'
+          message:'Некорректный ввод! Такого города нет...'
         }))  
       }
             dispatch(uiActions.setLoading(false))

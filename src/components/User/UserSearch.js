@@ -1,10 +1,10 @@
 import {useRef, useState} from 'react'
 import classes from './UserSearch.module.css'
-import {uiActions} from '../store/uiSlice'
+import {uiActions} from '../../store/uiSlice'
 import {useDispatch} from 'react-redux'
-import {actionsfetchDataHandler} from '../store/actions'
+import {actionsfetchDataHandler} from '../../store/actions'
 
-const UserSearch = (props) => {
+const UserSearch = () => {
     const [cityIsValid, setCityIsValid] = useState(true)
     const dispatch = useDispatch()
     const inputRef = useRef()
@@ -14,25 +14,21 @@ const UserSearch = (props) => {
         let inputRefValue = inputRef.current.value.trim();
 
         if (inputRefValue === '' || !isNaN(inputRefValue)) {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
             setCityIsValid(false)
             dispatch(uiActions.showNotification({
-                message: 'Блин...Город то введи!'
+                message: 'Вы не ввели город!'
             }))
         } else {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
             dispatch(actionsfetchDataHandler(inputRefValue))
             if (!cityIsValid) {
                 setCityIsValid(true);
             }
             inputRef.current.value = ''
         }
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
             
     }
 

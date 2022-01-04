@@ -8,7 +8,7 @@
     text-align: center;
     margin: 0 auto;
     color: #fff;
-    font-size:22px;
+    /* font-size:1.25rem; */
 }
 
 .form-group {
@@ -23,7 +23,11 @@
 input {
     padding:10px 5px;
     width: 90%;
-    font-size:20px;
+    font-size:1.25rem;
+}
+
+label {
+    font-size:1.25rem;
 }
 
 button {
@@ -32,7 +36,7 @@ button {
     background: crimson;
     border-radius: 10px;;
     color:#fff;
-    font-size:18px;
+    font-size:inherit;
     cursor: pointer;
 
 }

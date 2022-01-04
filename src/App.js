@@ -1,22 +1,16 @@
 import { useEffect } from 'react'
-import Layout from './components/Layout';
-import UserSearch from "./components/UserSearch";
-import Weather from './components/Weather';
-import WeatherDetails from './components/WeatherDetails';
-import DailyWeather from './components/DailyWeather';
+import Layout from './components/UI/Layout';
+import UserSearch from "./components/User/UserSearch";
+import Weather from './components/Weather/Weather';
+import WeatherDetails from './components/Weather/WeatherDetails';
+import DailyWeather from './components/Weather/DailyWeather';
 import { useSelector, useDispatch } from 'react-redux';
 import {actionsfetchDataHandler} from './store/actions'
 import {uiActions} from './store/uiSlice'
-import Notification from './components/Notification';
-import Loading from './components/Loading';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import TodayInfo from './components/TodayInfo';
-import OtherDetails from './components/OtherDetails';
+import Notification from './components/UI/Notification';
+import Loading from './components/UI/Loading';
+import TodayInfo from './components/Weather/TodayInfo';
+import OtherDetails from './components/Weather/OtherDetails';
 
 // "homepage": "https://mancun07.github.io/weather-app",
 
@@ -41,24 +35,8 @@ function App() {
     return () => clearTimeout(timer)
   }, [dispatch, notification])
 
-
-  // const unixTimestamp = 1631264400
-
-  // const milliseconds = unixTimestamp * 1000 
-  
-  // const dateObject = new Date(milliseconds)
-
-  // console.log(dateObject)
-  
-  // const humanDateFormat = dateObject.toLocaleString()
-//   const humanDateFormat = dateObject.getDay()
-// console.log(humanDateFormat)
-
-
   return (
       <Layout>
-        {/* <Router>
-          <Switch> */}
         {loading && <Loading/>}
         {!loading && notification && <Notification message={notification.message}/>}
         {!loading && weather && <Weather/>}
@@ -67,8 +45,6 @@ function App() {
         {!loading && dailyWeather && <DailyWeather />}
         {!loading && weather && <TodayInfo />}
         {!loading && weather && <OtherDetails />}
-          {/* </Switch>
-        </Router> */}
       </Layout>
   );
 }

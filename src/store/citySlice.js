@@ -17,21 +17,20 @@ const citySlice = createSlice({
 
             const unixTimestamp = state.weather.sys.sunrise
             const milliseconds = unixTimestamp * 1000 
-            const dateObject = new Date(milliseconds)
-            const humanDateFormat = dateObject.getHours() + ':'+ dateObject.getMinutes()
+            const dateObject = new Date(milliseconds)   
+            const humanDateFormat = (dateObject.getHours() < 10 ? '0' : '' ) + dateObject.getHours() + ':' + (dateObject.getMinutes() < 10 ? '0' : '') + dateObject.getMinutes()
             state.weather.sys.sunrise = humanDateFormat
 
             const unixTimestamp2 = state.weather.sys.sunset
             const milliseconds2 = unixTimestamp2 * 1000 
             const dateObject2 = new Date(milliseconds2)
-            const humanDateFormat2 = dateObject2.getHours() + ':'+ dateObject2.getMinutes()
+            const humanDateFormat2 = (dateObject2.getHours() < 10 ? '0' : '' ) + dateObject2.getHours() + ':' + (dateObject2.getMinutes() < 10 ? '0' : '') + dateObject2.getMinutes()
             state.weather.sys.sunset = humanDateFormat2
         },
         addHourlyWeather(state, action) {
             state.hourlyWeather = action.payload 
             state.hourlyWeather.hourly.forEach(el => {
                 el.temp = (el.temp - 273.15).toFixed()
-                // return el
             })
             state.hourlyWeather.current.temp = (state.hourlyWeather.current.temp - 273.15).toFixed()
         },

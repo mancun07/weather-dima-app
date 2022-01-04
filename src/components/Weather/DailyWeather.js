@@ -1,13 +1,13 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
 import classes from './DailyWeather.module.css'
-import {motion} from 'framer-motion'
 
 const DailyWeather = () => {
 
     const daysOfWeek = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота' ]
 
     const dailyWeather = useSelector(state => state.city.dailyWeather)
+    console.log(dailyWeather.daily)
 
     const updatedArray = dailyWeather.daily.slice(1).map(el => {
 

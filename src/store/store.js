@@ -5,6 +5,6 @@ import citySlice from './citySlice'
 export const store = configureStore({
   reducer: {
       ui: uiSlice.reducer,
-        city: citySlice.reducer,
+      city: citySlice.reducer,
   },
 })
