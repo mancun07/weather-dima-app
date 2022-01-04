@@ -1,7 +1,6 @@
 import {cityActions} from './citySlice'
 import {uiActions} from './uiSlice'
 
-// const key = '28b0799543359e8e6ed8330d199b4ccc'
 const key = process.env.REACT_APP_VALUE
 
 export const actionsfetchDataHandler = (userValue) => {
